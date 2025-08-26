@@ -53,7 +53,7 @@ export const PersonalizationProvider = ({ children }) => {
     useEffect(() => {
     initializePersonalizationSDK();
   }, []);
-console.log(personalizationSDK);
+// console.log(personalizationSDK);
 
  // Fetch experiences after SDK is ready
   useEffect(() => {
@@ -61,7 +61,7 @@ console.log(personalizationSDK);
       if (personalizationSDK) {
         try {
           const data = await personalizationSDK.getExperiences();
-          console.log("Fetched experiences:", data);
+          // console.log("Fetched experiences:", data);
           setExperiences(data);
         } catch (error) {
           console.error("Error fetching experiences:", error);
@@ -72,7 +72,7 @@ console.log(personalizationSDK);
     fetchExperiences();
   }, [personalizationSDK]);
 
-  console.log("Expr",experiences)
+  // console.log("Expr",experiences)
   // Update variant in SDK when audience changes
 // useEffect(() => {
 //   if (personalizationSDK && audience) {
