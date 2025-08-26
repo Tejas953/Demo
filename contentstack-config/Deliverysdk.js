@@ -1,16 +1,9 @@
 import * as Contentstack from "contentstack";
-// export const onLiveEdit = ContentstackLivePreview.onLiveEdit;
+
+console.log("API KEY (browser)", process.env.NEXT_PUBLIC_CONTENTSTACK_API_KEY);
 
 export const Contentstack_stack = Contentstack.Stack({
-  api_key: "blt1d1cf645c67385b7",
-  delivery_token: "cs874d014fb35cd52057ed5f52",
-  environment: "preview",
+  api_key: process.env.NEXT_PUBLIC_CONTENTSTACK_API_KEY,
+  delivery_token: process.env.NEXT_PUBLIC_CONTENTSTACK_DELIVERY_TOKEN,
+  environment: process.env.NEXT_PUBLIC_CONTENTSTACK_ENVIRONMENT,
 });
-// ContentstackLivePreview.init({
-//     editButton: {
-//         enable: true,
-//         exclude: ["outsideLivePreviewPortal"],
-//         includeByQueryParameter: false,
-//         position: "top-right",
-//     },
-// });
