@@ -77,7 +77,7 @@ const Header = () => {
 
             {/* Dropdown */}
             <div className="ml-6">
-                <label className="text-white mr-2">Audience:</label>
+                <label className="text-white mr-2">Audience for tour:</label>
                 <select
                     value={audience}
                     onChange={(e) => setAudience(e.target.value)}
